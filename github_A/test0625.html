@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  
+  <!-- cssの内部参照：ヘッダー埋め込み -->
+  <style media="screen"> /*画面に対するスタイル*/
+
+  img {
+    width: 100%;
+    height: auto;
+    filter: blur(5px);
+  }
+
+  .original img {
+    filter: none;
+  }
+
+  .blur img{
+    filter: blur(5px);
+  }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- 画像の表示 -->
+  <div class="original"> <!--cssでのクラス名"original"-->
+    <img src="image/test_bg.png" alt=""><br>
+    オリジナルが画像<br>
+  </div>
+
+  <div class="blur"> <!--cssでのクラス名"blur"-->
+    <img src="image/test_bg.png" alt=""><br>
+    ガウシアンぼかし(blur(5px))<br>
+  </div>
+
+</body>
+
+</html>
