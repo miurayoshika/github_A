@@ -1,22 +1,111 @@
 <html>
 
 <head>
-  
+  <title>フィルター効果サンプル</title>
+
   <!-- cssの内部参照：ヘッダー埋め込み -->
   <style media="screen"> /*画面に対するスタイル*/
+
+  div {
+    width: 320px;
+    height: auto;
+    float: left;
+    margin: 3px;
+    position:  relative;
+    border: #ddd 3px solid;
+  }
 
   img {
     width: 100%;
     height: auto;
-    filter: blur(5px);
   }
 
   .original img {
     filter: none;
   }
 
-  .blur img{
+
+  /* blur( px) */
+  .blurA img{
     filter: blur(5px);
+  }
+
+  .blurB img{
+    filter: blur(10px);
+  }
+
+  .blurC img{
+    filter: blur(30px);
+  }
+
+
+  /* brightness( %) */
+  .brightnessA img{
+    filter: brightness(10%);
+  }
+
+  .brightnessB img{
+    filter: brightness(50%);
+  }
+
+  .brightnessC img{
+    filter: brightness(200%);
+  }
+
+
+  /* contrast( %) */
+  .contrastA img{
+    filter: contrast(0%);
+  }
+
+  .contrastB img{
+    filter: contrast(50%);
+  }
+
+  .contrastC img{
+    filter: contrast(200%);
+  }
+
+
+  /* drop-shadow(offsetX offsetY) */
+  .drop-shadowA img{
+    filter: drop-shadow(10px 0px 0px red);
+  }
+
+  .drop-shadowB img{
+    filter: drop-shadow(10px 10px 0px blue);
+  }
+
+  .drop-shadowC img{
+    filter: drop-shadow(-10px -10px 10px black);
+  }
+
+
+  /* grayscale( %) */
+  .grayscaleA img{
+    filter: grayscale(50%);
+  }
+
+  .grayscaleB img{
+    filter: grayscale(100%);
+  }
+
+  .grayscaleC img{
+    filter: grayscale(200%);
+  }
+  
+
+  /* hue-rotate( deg) */
+  .hue-rotateA img{
+    filter: hue-rotate(90deg);
+  }
+
+  .hue-rotateB img{
+    filter: hue-rotate(180deg);
+  }
+
+  .hue-rotateC img{
+    filter: hue-rotate(270deg);
   }
 
   </style>
@@ -26,14 +115,136 @@
 <body>
 
   <!-- 画像の表示 -->
+
+  <!-- blur -->
   <div class="original"> <!--cssでのクラス名"original"-->
     <img src="image/test_bg.png" alt=""><br>
     オリジナルが画像<br>
   </div>
 
-  <div class="blur"> <!--cssでのクラス名"blur"-->
+  <div class="blurA"> <!--cssでのクラス名"blurA"-->
     <img src="image/test_bg.png" alt=""><br>
     ガウシアンぼかし(blur(5px))<br>
+  </div>
+
+  <div class="blurB"> <!--cssでのクラス名"blurB"-->
+    <img src="image/test_bg.png" alt=""><br>
+    ガウシアンぼかし(blur(10px))<br>
+  </div>
+
+  <div class="blurC"> <!--cssでのクラス名"blurC"-->
+    <img src="image/test_bg.png" alt=""><br>
+    ガウシアンぼかし(blur(30px))<br>
+  </div>
+
+
+  <!-- brightness -->
+  <div class="original"> <!--cssでのクラス名"original"-->
+    <img src="image/test_bg.png" alt=""><br>
+    オリジナルが画像<br>
+  </div>
+
+  <div class="brightnessA"> <!--cssでのクラス名"brightnessA"-->
+    <img src="image/test_bg.png" alt=""><br>
+    明るさ: brightness(10%)<br>
+  </div>
+
+  <div class="brightnessB"> <!--cssでのクラス名"brightnessB"-->
+    <img src="image/test_bg.png" alt=""><br>
+    明るさ: brightness(50%)<br>
+  </div>
+
+  <div class="brightnessC"> <!--cssでのクラス名"brightnessC"-->
+    <img src="image/test_bg.png" alt=""><br>
+    明るさ: brightness(200%)<br>
+  </div>
+
+
+  <!-- contrast -->
+  <div class="original"> <!--cssでのクラス名"original"-->
+    <img src="image/test_bg.png" alt=""><br>
+    コントラスト: contrast(100%)<br>
+  </div>
+
+  <div class="contrastA"> <!--cssでのクラス名"brightnessA"-->
+    <img src="image/test_bg.png" alt=""><br>
+    コントラスト: contrast(0%)<br>
+  </div>
+
+  <div class="contrastB"> <!--cssでのクラス名"brightnessB"-->
+    <img src="image/test_bg.png" alt=""><br>
+    コントラスト: contrast(50%)<br>
+  </div>
+
+  <div class="contrastC"> <!--cssでのクラス名"brightnessC"-->
+    <img src="image/test_bg.png" alt=""><br>
+    コントラスト: contrast(200%)<br>
+  </div>
+
+
+  <!-- drop-shadow -->
+  <div class="original"> <!--cssでのクラス名"original"-->
+    <img src="image/test_bg.png" alt=""><br>
+    ドロップシャドウ: drop-shadow(0px 0px 0px)<br>
+  </div>
+
+  <div class="drop-shadowA"> <!--cssでのクラス名"drop-shadowA"-->
+    <img src="image/test_bg.png" alt=""><br>
+    ドロップシャドウ: drop-shadow(10px 0px 0px red)<br>
+  </div>
+
+  <div class="drop-shadowB"> <!--cssでのクラス名"drop-shadowB"-->
+    <img src="image/test_bg.png" alt=""><br>
+    ドロップシャドウ: drop-shadow(10px 10px 0px blue)<br>
+  </div>
+
+  <div class="drop-shadowC"> <!--cssでのクラス名"drop-shadowC"-->
+    <img src="image/test_bg.png" alt=""><br>
+    ドロップシャドウ: drop-shadow(-10px -10px 10px black)<br>
+  </div>
+
+
+  <!-- grayscale -->
+  <div class="original"> <!--cssでのクラス名"original"-->
+    <img src="image/test_bg.png" alt=""><br>
+    グレースケール: grayscale(0%)<br>
+  </div>
+
+  <div class="grayscaleA"> <!--cssでのクラス名"grayscaleA"-->
+    <img src="image/test_bg.png" alt=""><br>
+    グレースケール: grayscale(50%)<br>
+  </div>
+
+  <div class="grayscaleB"> <!--cssでのクラス名"grayscaleB"-->
+    <img src="image/test_bg.png" alt=""><br>
+    グレースケール: grayscale(100%)<br>
+  </div>
+
+  <div class="grayscaleC"> <!--cssでのクラス名"grayscaleC"-->
+    <img src="image/test_bg.png" alt=""><br>
+    グレースケール: grayscale(200%)<br>
+  </div>
+
+  <!-- hu
+    e-rotate -->
+  <div class="original"> <!--cssでのクラス名"original"-->
+    <img src="image/test_bg.png" alt=""><br>
+    色相: hue-rotate(0deg)<br>
+  </div>
+
+  <div class="hue-rotateA"> <!--cssでのクラス名"hue-rotateA"-->
+    <img src="image/test_bg.png" alt=""><br>
+    色相: hue-rotate(90deg)<br>
+  </div>
+
+  <div class="hue-rotateB"> <!--cssでのクラス名"hue-rotateB"-->
+    <img src="image/test_bg.png" alt=""><br>
+    色相: hue-rotate(180deg)<br>
+  </div>
+
+  <div class="hue-rotateC"> <!--cssでのクラス名"hue-rotateC"-->
+    <img src="image/test_bg.png" alt=""><br>
+    色相: hue-rotate(270deg)<br>
   </div>
 
 </body>
