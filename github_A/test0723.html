@@ -1,0 +1,101 @@
+<html>
+<head>
+  <style>
+
+    .grid {
+      width: 320px;
+      height: calc(180px+29px);
+      margin: 4px;
+      float: left;
+      border-color: gray;
+      overflow: hidden;
+    }
+
+    .grid .sample_image 
+    {
+      width: 320px;
+      height: 180px;
+      background: url(image/test_bg.png);
+      background-size: cover;
+      filter: none;
+      transition: 0.5s;
+    }
+
+    .grid{
+      filter: none;
+      /*遷移時間の指定*/
+      transition: 0.5s; 
+    }
+
+    /* .grid:hover{
+      filter: blur(10px);
+    } */
+
+    .blur:hover .sample_image {
+      filter: blur(10px);
+    }
+    .brightness:hover .sample_image {
+      filter: brightness(200%);
+    }
+    .contrast:hover .sample_image {
+      filter: contrast(200%);
+    }
+    .grayscale:hover .sample_image {
+      filter: grayscale(100%);
+    }
+    .hue-rotate:hover .sample_image {
+      filter: hue-rotate(360deg);
+    }
+
+    .string {
+      position: relative;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      background: rgb(0, 0, 0, 0.5);
+      top: -20px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+</body>
+
+<div class="grid"> <!--画像の配置-->
+  <div class="blur"> <!--フィルター効果-->
+    <div class="sample_image"></div> <!--画像適用-->
+    <p class="string">blur</p> <!--フィルター効果のテキスト-->
+  </div>
+</div>
+
+<div class="grid">
+  <div class="brightness">
+    <div class="sample_image"></div>
+    <p class="string">brightness</p>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="contrast">
+    <div class="sample_image"></div>
+    <p class="string">contrast</p>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grayscale">
+    <div class="sample_image"></div>
+    <p class="string">grayscale</p>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="hue-rotate">
+    <div class="sample_image"></div>
+    <p class="string">hue-rotate</p>
+  </div>
+</div>
+
+</html>
