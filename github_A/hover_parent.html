@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <style media="screen">
+
+    .parent{
+      position:relative;
+      background-color: lightblue;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .parent .child{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      /* 子要素自体の幅と高さの半分をマイナス方向に移動 */
+      transform: translate(-50%, -50%);
+      width: 80%;
+      text-align: center;
+      background-color: white;
+      transition: all 0.5s;
+    }
+
+    /* 擬似クラスの:hoverを親要素に設定 */
+    /* 親要素:hover 子要素{アクション} */
+    .parent:hover .child{
+      transform: translate(-50%, 10%);
+    }
+
+  </style>
+</head>
+
+<body>
+  <!--hover時にその子の要素にアクションをさせる-->
+
+  <div class="parent">
+    <div class="child">action</div>
+  </div>
+
+</body>
+
+</html>

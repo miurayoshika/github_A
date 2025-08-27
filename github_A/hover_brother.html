@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <style maida="screen"> 
+
+  .bros-01{
+    background-color: lightblue;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .bros-02{
+    background-color: lightpink;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    font-size: 20px;
+    text-align: center;
+    transition:  all 0.5s;
+  }
+
+  /* ある要素にhover時にその兄弟(並列に並んでいる要素)にアクションさせる(~で要素を限定) */
+  .bros-01:hover ~ .bros-02{
+    height: 300px;
+    background-color: lightgreen;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="bros-01">hover</div>
+  <div class="bros-02">bross</div>
+</body>
+
+</html>

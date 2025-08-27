@@ -1,0 +1,81 @@
+<html>
+
+<head>
+  <style media="screen">
+
+    .wrapper{
+      width: 1280px;
+      height: 640px;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+
+    .square_wrapper{
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto 20px;
+      overflow: hidden;
+      background-color: black;
+      color: white;
+    }
+
+    .square{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .string{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0 auto 20px;
+      text-align: center;
+      transform: translate(-50%,-50%);
+    }
+
+    .square:hover::before{
+      animation-name: background-slide;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    .square::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: lightblue;
+      transform: transformX(-100%);
+    }
+
+    @keyframes background-slide {
+      0%{
+            transform: translateX(-100%);
+      }
+      50%{
+            transform: translateX(-90%);
+      }
+      100%{
+            transform: translateX(0%);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="square_wrapper">
+      <div class="square">
+        <div class="string">animation</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
